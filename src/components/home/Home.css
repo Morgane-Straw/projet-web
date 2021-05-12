@@ -1,0 +1,29 @@
+.Home {
+    padding-top: 50%;
+}
+
+.Button {
+    margin: 2em;
+}
+
+#nav {
+    padding:0;
+    margin:0;
+}
+
+#nav li{
+    display: inline;
+    list-style: none;
+}
+
+.button-nav{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-right: 5% ;
+    
+}
+
+.footer{
+    padding-top: 150px;
+}
