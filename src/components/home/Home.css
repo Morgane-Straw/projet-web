@@ -1,0 +1,87 @@
+.Home {
+    padding-top: 50%;
+}
+
+.Button {
+    margin: 2em;
+}
+
+#nav {
+    padding:0;
+    margin:0;
+}
+
+#nav li{
+    display: inline;
+    list-style: none;
+}
+
+.button-nav{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-right: 5% ;
+    
+}
+
+.footer{
+    padding-top: 150px;
+}
+.bienvenue{
+    position: absolute;
+width: 213px;
+height: 48px;
+left: 81px;
+top: 299px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+
+color: #5775FF;
+}
+.logo{
+    position: absolute;
+    width: 308px;
+    height: 182px;
+    left: 34px;
+    top: 87px;
+
+}
+.top-login{
+    position: absolute;
+width: 375px;
+height: 419px;
+left: 0px;
+top: -154px;
+
+background: #EBEFF8;
+border-radius: 70px;
+}
+.blue-text{
+
+
+font-family: Raleway;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+
+color: #5775FF;
+
+}
+.white-text{
+    
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    
+    color: #FFFFFF;  
+}
