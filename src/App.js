@@ -3,7 +3,7 @@ import Home from './components/home/Home';
 import Profil from './components/profil/Profil';
 import Connexion from './components/connexion/Connexion';
 import Inscription from './components/inscription/Inscription';
-
+import reportWebVitals from './reportWebVitals';
 
 import {Route, Link} from 'react-router-dom';
 
