@@ -23,8 +23,7 @@ function App() {
       <Route exact path="/exercice" component= {Exercice}/>
       <Route exact path="/donnees" component= {Donnees}/>
       <Route exact path="/accueil" component= {Accueil}/>
-      
-
+      <Navbarre/>
     </div>
   );
 }
