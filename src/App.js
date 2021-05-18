@@ -20,9 +20,9 @@ function App() {
       <footer>
       <div className="footer" role="group" aria-label="Basic example">
                 <button type="button" className="btn btn-light">Accueil</button>
-                <button type="button" class="btn btn-light">Exercices</button>
-                <button type="button" class="btn btn-light">Données</button>
-                <button type="button" class="btn btn-light">Profil</button>
+                <button type="button" className="btn btn-light">Exercices</button>
+                <button type="button" className="btn btn-light">Données</button>
+                <button type="button" className="btn btn-light">Profil</button>
                 </div>
       </footer>
 
