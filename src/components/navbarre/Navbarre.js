@@ -12,6 +12,7 @@ export default class Navbarre extends React.Component{
                     <div className="footer" role="group" aria-label="Basic example">
                     <Link to="/accueil"><button type="button" className="btn btn-light">Accueil</button></Link>
                     <Link to="/exercice"><button type="button" class="btn btn-light">Exercices</button></Link>
+                    <button type="button" className="btn btn-light">SOS</button>
                     <Link to="/donnees"><button type="button" class="btn btn-light">Données</button></Link>
                     <Link to="/profil"><button type="button" class="btn btn-light">Profil</button></Link>
                     </div>
