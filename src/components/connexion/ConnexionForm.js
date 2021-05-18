@@ -2,6 +2,8 @@ import React from "react";
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {Route, Link} from 'react-router-dom';
+
 export default class ConnexionForm extends React.Component{
     render(){
         return(
@@ -18,9 +20,9 @@ export default class ConnexionForm extends React.Component{
             <Form.Group controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Se souvenir de moi" />
             </Form.Group>
-            <Button variant="primary" type="submit">
-                Submit
-            </Button>
+            <Link to="/accueil"><Button variant="primary" type="submit">
+                Valider
+            </Button></Link>
             </Form>
         );
         }

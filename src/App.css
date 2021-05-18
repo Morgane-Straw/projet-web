@@ -1,15 +1,18 @@
 .App {
   text-align: center;
+
 }
 
 html {
   height: 100%;
 }
+
 body {
   min-height: 100%;
   margin: 0;
   padding: 0;
   position: relative;
+  background-color: #EBEFF8 !important 
 }
 
 footer {

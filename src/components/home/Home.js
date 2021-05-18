@@ -12,9 +12,9 @@ export default class Home extends React.Component{
         return(
             <div className="Home"> 
                 <h1>Nom de l'appli</h1>
-                <p>Bienvenue</p>
-                <Link to="/connexion"><Button className="Button btn btn-primary">Se connecter</Button></Link>
-                <br/><Link to="/inscription"><button className="Button btn btn-secondary">S'inscrire</button></Link>
+                <p className="Bienvenue">Bienvenue</p>
+                <Link to="/connexion"><button className="Button Bouton_connexion">Se connecter</button></Link>
+                <br/><Link to="/inscription"><button className="Button Bouton_inscription">S'inscrire</button></Link>
             
            </div>
         );
