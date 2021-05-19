@@ -1,128 +1,96 @@
 import React from "react";
-import Parse from 'parse';
-import './Stress.css';
-import {mean}  from 'simple-statistics'; 
-import {standardDeviation} from 'simple-statistics'; 
-import normal_img from '../../asset/normal_img.PNG';
-import relaxation_img from '../../asset/relaxation_img.jpg';
+import "./Stress.css"
+import user_stress from './user_stress';
+import user_stats from './user_stats';
+import normal_img from '../../asset/normal_img.png';
+import relaxation_img from '../../asset/relaxation_img.png';
 import stress_img from '../../asset/stress_img.png';
-
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 function now(){
-  const time = new Date(Date.now());
-  var time_str = time.getDate()+'/'+(time.getMonth()+1)+'/'+time.getFullYear()+' '+time.getHours()+':'+time.getMinutes()
-  //10/4/2021 9:22:00 PM
-  return time_str
-}
-function get_HR(){
+    const time = new Date(Date.now());
+    var time_str = time.getDate()+'/'+(time.getMonth()+1)+'/'+time.getFullYear()+' '+time.getHours()+':'+time.getMinutes()
+    //10/4/2021 9:22:00 PM
+    return time_str
+  }
+  
+function show_stressLvl(){
+      const user=1
+      const id=now()+' '+user;
+      const hr = user_stress.map((user_stress)=>{
+          for (var i in user_stress.dataId ){
+            if(id==user_stress.dataId[i]){
+                return(user_stress.HR[i]);
+            }
+          }
+          
+      }).reduce((a, b) => a + b, 0);
+     const stress_threshold = user_stats.map((user_stats)=>{
+
+        for (var i in user_stats.userId ){
+            if(user==user_stats.userId[i]){
+                            return(user_stats.stress_threshold[i]);
+            }
+        }
+        
+    }).reduce((a, b) => a + b, 0);
+    const relaxation_threshold = user_stats.map((user_stats)=>{
+
+        for (var i in user_stats.userId ){
+            if(user==user_stats.userId[i]){
+                            return(user_stats.relaxation_threshold[i]);
+            }
+        }
+        
+    }).reduce((a, b) => a + b, 0);   
+    var stress=hr>stress_threshold;
+    var relax=hr<relaxation_threshold;
+
+    var img=document.getElementById('img-stress');
+    var txt=document.getElementById('txt-stress');
+    if (stress){
+        img.src=stress_img;
+        txt.innerText="Ca n’a pas l’air d’aller...";
+      }else{
+        if(relax){
+          img.src=relaxation_img;
+          txt.innerText="Vous avez l’air de bonne humeur !";
+        }
+      else{
+        img.src=normal_img;
+        txt.innerText="Envie d’un moment de détente ?";
     
-    Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
-    Parse.initialize(
-      'Uxrn1se1WkRL8vnnfKkMQvfuccXD7Ar7fKNTcyN2', // This is your Application ID
-      'nrYhcWChbWblkQcKB3aYMLjVhZbkP4tw1aVAVHeh' // This is your Javascript key
-    );
-      
-    const user =1;
-    const Utilisateur = Parse.Object.extend('Utilisateur');
-    const query = new Parse.Query(Utilisateur);
-    query.equalTo("dataID", now()+' '+user);
-    var value=0;  
-    query.find().then((results) => {
-        const object = results[0];
-      var hr=document.getElementById('hr');
-      hr.innerHTML=object.get("HR");
-      hr.style.visibility='hidden';
-      //console.log(hr.innerHTML);
-      //console.log(now());
-      
-    }, (error) => {
-      if (typeof document !== 'undefined') document.write(`Error while fetching Utilisateur: ${JSON.stringify(error)}`);
-      console.error('Error while fetching Utilisateur', error);
-    });
+    }
+      }
+      return(hr);
+    }
+
+export default class Stress extends React.Component{
+    render(){
+        return(
+          <div id="stress">
+          <img id='img-stress' className="img-stress"></img>
+          <div className="box-stress">
+          <div id='txt-stress' className="txt-stress"></div>
+          </div>
+          </div>
+        );
+    }
+    componentDidMount(){
+        console.log(show_stressLvl());
+    }
 }
-function get_stressLvl(){
-    Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
-    Parse.initialize(
-      'Uxrn1se1WkRL8vnnfKkMQvfuccXD7Ar7fKNTcyN2', // This is your Application ID
-      'nrYhcWChbWblkQcKB3aYMLjVhZbkP4tw1aVAVHeh' // This is your Javascript key
-    );
-      
-    const user =1;
-    const Utilisateur = Parse.Object.extend('Utilisateur');
-    const query1 = new Parse.Query(Utilisateur);
-    var hr=[];
-    query1.equalTo("dataID", now()+' '+user);
-    query1.find().then((results) => {
-        var object = results[0];       
-        var target=document.getElementById('hr');
-        target.style.visibility='hidden'; 
-        target.innerHTML=object.get("HR");
-        hr.push(object.get("HR"))
-    }, (error) => {
-      if (typeof document !== 'undefined') document.write(`Error while fetching Utilisateur: ${JSON.stringify(error)}`);
-      console.error('Error while fetching Utilisateur', error);
-    });
-    Parse.initialize(
-      'Uxrn1se1WkRL8vnnfKkMQvfuccXD7Ar7fKNTcyN2', // This is your Application ID
-      'nrYhcWChbWblkQcKB3aYMLjVhZbkP4tw1aVAVHeh' // This is your Javascript key
-    );
-    const User_stats = Parse.Object.extend('User_Stats');
-    const query2 = new Parse.Query(User_stats);    
-    query2.equalTo("userId", ''+user);
-    query2.find().then((results) => {
-        var object = results[0];
-        var img=document.getElementById('img-stress');
-        var txt=document.getElementById('txt-stress');
-        var stress_threshold=object.get("stress_threshold");
-        var relaxation_threshold=object.get("relaxation_threshold");
-        //var hr=parseInt(document.getElementById('hr').innerHTML);
-        console.log(hr[0]);
-        //console.log(document.getElementById('hr').innerText);
-        //console.log(hr+'<?'+stress_threshold);
-        var stress=hr[0]>stress_threshold;
-        var relax= hr[0]<relaxation_threshold;  
-        if (stress){
+
+
+/*        if (stress==1){
           img.src=stress_img;
           txt.innerText="Ca n’a pas l’air d’aller...";
         }else{
-          if(relax){
+          if(stress==-1){
             img.src=relaxation_img;
             txt.innerText="Vous avez l’air de bonne humeur !";
           }
         else{
           img.src=relaxation_img;
           txt.innerText="Envie d’un moment de détente ?";
-        }}
-        
-      }, (error) => {
-      if (typeof document !== 'undefined') document.write(`Error while fetching Utilisateur: ${JSON.stringify(error)}`);
-      console.error('Error while fetching Utilisateur', error);
-    });
-}
-
-export default class StressLvl extends React.Component{
-    
-    render(){
-        get_stressLvl();
-        return(
-            <div className='stress_lvl'>
-              <div id="hr"></div>
-              <img src='' id="img-stress"></img>
-              <div id="txt-stress"></div>
-            </div> 
-        );
-    }
-
-
-}
-/*export default class Stressed extends React.Component{
-    
-  render(){
-      get_stressLvl();
-      return(
-          <img src="tiramisu.png"><\img>
-          
-      );
-  }
-
-
-}**/
+        }}*/ 
