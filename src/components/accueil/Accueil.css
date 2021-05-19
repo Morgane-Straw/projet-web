@@ -7,6 +7,10 @@
     
 }
 
+.Page_centree{
+    text-align: center;
+}
+
 
 .Bibo_accueil{
     width: 308px;
@@ -15,4 +19,26 @@
     margin-left: auto;
     margin-right: auto;
 
+}
+
+.Text_Bonjour{
+    color: #5775FF;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.Text_Humeur{
+    font-weight: bold;
+    font-size: 13px;
+    font-family: Raleway, sans-serif;
+}
+
+.Humeur{
+    width: 273px;
+    height: 85px;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
