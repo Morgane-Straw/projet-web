@@ -1,9 +1,43 @@
+.div1{
+    
+position: absolute;
+width: 100%;
+height: 619px;
+left: 0px;
+top: -154px;
+background: #EBEFF8;
+border-radius: 70px;
+text-align: center;
+}
+
+.text_bienvenue{
+position: static;
+
+font-family: Raleway, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+text-align: center;
+color: #5775FF;
+}
+
+img{
+    width: 308px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+  
+}
+
 .Home {
     padding-top: 50%;
 }
 
 .Button {
     margin: 2em;
+    position: relative;
 }
 
 #nav {
@@ -24,29 +58,26 @@
     color: white;
     box-shadow: 0px 5px 7px gray;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
     height: 40px;
     text-align: center;
+    top: 280px;
 
 }
 
 .Bouton_inscription{
     border-radius: 30px;
-    background-color: white;
+    background-color: #EBEFF8;
     border:none;
     color: #5775FF;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
     height: 40px;
     box-shadow: 0px 5px 7px gray;
+    top: 250px;
 
 
 }
 
-.Bienvenue{
-    color: #5775FF;
-    font-weight: bold;
-    font-size: 2em;
 
-}
 
