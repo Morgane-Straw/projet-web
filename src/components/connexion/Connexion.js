@@ -9,7 +9,6 @@ export default class Connexion extends React.Component{
     render(){
         return(
             <div className="Connexion"> 
-               <h1 className="Text_connexion">Connexion</h1>
                 <ConnexionForm />
             </div>
         );

@@ -1,0 +1,14 @@
+.Sunset_Image{
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.Images_Exercice{
+    overflow-x: auto;
+    display: flex;
+    margin-top: 100px;
+
+}
+

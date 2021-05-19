@@ -1,15 +1,33 @@
-body {
+/*body {
     min-height: 100%;
     margin: 0;
     padding: 0;
     position: relative;
-  }
+  }*/
   
+
+
   footer {
     position: absolute;
     bottom:0;
     right:0;
     left:0;
+    height: 70px;
+    background-color:white;
+    border-radius: 20px 20px 0px 0px ;
    
   }
   
+ 
+
+  .Nav_logos{
+    height: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 11px;
+    
+  }
+
+  .SOS{
+    height: 50px;
+}
