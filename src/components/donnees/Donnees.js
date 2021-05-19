@@ -7,7 +7,7 @@ export default class Donnees extends React.Component{
 
     render(){
         return(
-            <div className="Donnees"> 
+            <div className="Page_Normale"> 
                <h1>Donnees</h1>
                <Navbarre/>
             </div>

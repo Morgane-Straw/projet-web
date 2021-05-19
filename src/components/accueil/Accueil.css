@@ -1,0 +1,18 @@
+
+.Page_Normale{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EBEFF8;
+    
+}
+
+
+.Bibo_accueil{
+    width: 308px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}

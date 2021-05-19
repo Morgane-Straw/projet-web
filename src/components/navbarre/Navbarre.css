@@ -5,11 +5,24 @@
     position: relative;
   }*/
   
+
+
   footer {
     position: absolute;
     bottom:0;
     right:0;
     left:0;
+    height: 70px;
+    background-color:white;
+    border-radius: 20px 20px 0px 0px ;
    
   }
   
+ 
+
+  .Nav_logos{
+    height: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
