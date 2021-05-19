@@ -1,5 +1,6 @@
 import React from "react";
-import "./Stress.css"
+import "./Humeur.css"
+import"../accueil/Accueil.css"
 import user_stress from './user_stress';
 import user_stats from './user_stats';
 import normal_img from '../../asset/normal_img.png';
@@ -46,8 +47,8 @@ function show_stressLvl(){
     var stress=hr>stress_threshold;
     var relax=hr<relaxation_threshold;
 
-    var img=document.getElementById('img-stress');
-    var txt=document.getElementById('txt-stress');
+    var img=document.getElementById('img-humeur');
+    var txt=document.getElementById('txt-humeur');
     if (stress){
         img.src=stress_img;
         txt.innerText="Ca n’a pas l’air d’aller...";
@@ -65,15 +66,14 @@ function show_stressLvl(){
       return(hr);
     }
 
-export default class Stress extends React.Component{
+export default class Humeur extends React.Component{
     render(){
         return(
-          <div id="stress">
-          <img id='img-stress' className="img-stress"></img>
-          <div className="box-stress">
-          <div id='txt-stress' className="txt-stress"></div>
+          <div id="Humeur">
+          <img id='img-humeur' className="Img_Humeur"></img>
+          <div id='txt-humeur' className="Text_Humeur_2"></div>
           </div>
-          </div>
+
         );
     }
     componentDidMount(){

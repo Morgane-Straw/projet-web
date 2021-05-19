@@ -5,6 +5,7 @@ import Navbarre from '..//navbarre/Navbarre';
 import sun_logo from '../../sun.png';
 import './Accueil.css';
 import bibo from '../../Bibo.png';
+import Humeur from "../data/Humeur.js"
 
 export default class Accueil extends React.Component{
 
@@ -14,10 +15,10 @@ export default class Accueil extends React.Component{
                 <div className="Page_Normale Page_centree"> 
                     <img src={bibo} className="Bibo_accueil" alt="bibo" /> 
                     <p className="Text_Bonjour">Bonjour</p>
-                    <p className="Text_Humeur">Comment allez-vous aujourd'hui ?</p>
-                    <img src={sun_logo} className="Sun_Logo" alt="sun_logo" />
+                    
                     <div className="Humeur">
-                        <p className="Text_Humeur_2">Vous avez l'air de bonne humeur !</p>
+                        <Humeur/>
+                       
                     </div>
                 </div>
                 <Navbarre/>
@@ -27,3 +28,5 @@ export default class Accueil extends React.Component{
 
 
 }
+/*<p className="Text_Humeur">Comment allez-vous aujourd'hui ?</p>
+                    <img src={sun_logo} className="Sun_Logo" alt="sun_logo" />*/
