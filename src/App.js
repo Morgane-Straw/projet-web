@@ -9,6 +9,7 @@ import Exercice from './components/exercice/Exercice';
 import Donnees from './components/donnees/Donnees';
 import Accueil from './components/accueil/Accueil';
 import Navbarre from './components/navbarre/Navbarre';
+import SOS from './components/sos/Sos';
 import reportWebVitals from './reportWebVitals';
 import {Route, Link} from 'react-router-dom';
 
@@ -23,6 +24,7 @@ function App() {
       <Route exact path="/exercice" component= {Exercice}/>
       <Route exact path="/donnees" component= {Donnees}/>
       <Route exact path="/accueil" component= {Accueil}/>
+      <Route exact path="/sos" component= {SOS}/>
     </div>
   );
 }
