@@ -8,7 +8,8 @@ import relaxation_img from '../../asset/relaxation_img.png';
 import stress_img from '../../asset/stress_img.png';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-function now(){
+
+export function now(){
     const time = new Date(Date.now());
     var time_str = time.getDate()+'/'+(time.getMonth()+1)+'/'+time.getFullYear()+' '+time.getHours()+':'+time.getMinutes()
     //10/4/2021 9:22:00 PM
