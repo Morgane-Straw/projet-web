@@ -14,6 +14,7 @@ import Exemple_exercice from './components/exemple_exercice/Exemple_exercice';
 import En_parler from './components/en_parler/En_parler';
 import reportWebVitals from './reportWebVitals';
 import {Route, Link} from 'react-router-dom';
+import Aide from './components/aide/Aide';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Route exact path="/accueil" component= {Accueil}/>
       <Route exact path="/sos" component= {SOS}/>
       <Route exact path="/exempleexercice" component= {Exemple_exercice}/>
+      <Route exact path="/aide" component= {Aide}/>
     </div>
   );
 }
