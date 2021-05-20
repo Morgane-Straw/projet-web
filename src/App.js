@@ -12,6 +12,7 @@ import Navbarre from './components/navbarre/Navbarre';
 import SOS from './components/sos/Sos';
 import Exemple_exercice from './components/exemple_exercice/Exemple_exercice';
 import En_parler from './components/en_parler/En_parler';
+import InformationsPerso from './components/informationsPerso/InformationsPerso';
 import reportWebVitals from './reportWebVitals';
 import {Route, Link} from 'react-router-dom';
 import Aide from './components/aide/Aide';
@@ -31,6 +32,8 @@ function App() {
       <Route exact path="/sos" component= {SOS}/>
       <Route exact path="/exempleexercice" component= {Exemple_exercice}/>
       <Route exact path="/aide" component= {Aide}/>
+      <Route exact path="/informationsPerso" component= {InformationsPerso}/>
+
     </div>
   );
 }
