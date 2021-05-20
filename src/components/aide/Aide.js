@@ -5,7 +5,7 @@ import Navbarre from '../navbarre/Navbarre';
 
 
 
-export default class Exemple_exercice extends React.Component{
+export default class Aide extends React.Component{
 
     render(){
         return(
