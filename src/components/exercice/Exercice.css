@@ -1,14 +1,38 @@
 .Sunset_Image{
-    width: 200px;
+    width: 150px;
     height: auto;
     border-radius: 20px;
     margin: 20px;
+    box-shadow: 0px 5px 7px gray;
+
 }
 
 .Images_Exercice{
     overflow-x: auto;
     display: flex;
-    margin-top: 100px;
 
 }
 
+.Images_Exercice2{
+    overflow-x: auto;
+    display: flex;
+    overflow-y: scroll;
+   
+
+}
+
+.Text_Exercice{
+    color: #5775FF;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.Type_Exercice{
+    text-align: left;
+}
+
+.Text_Type{
+    color: #004AAD;
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
