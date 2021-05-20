@@ -83,15 +83,3 @@ export default class Humeur extends React.Component{
 }
 
 
-/*        if (stress==1){
-          img.src=stress_img;
-          txt.innerText="Ca n’a pas l’air d’aller...";
-        }else{
-          if(stress==-1){
-            img.src=relaxation_img;
-            txt.innerText="Vous avez l’air de bonne humeur !";
-          }
-        else{
-          img.src=relaxation_img;
-          txt.innerText="Envie d’un moment de détente ?";
-        }}*/ 
