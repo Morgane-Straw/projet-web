@@ -68,6 +68,11 @@ function show_stressLvl(){
     }
 
 export default class Humeur extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = { hr: 0 };
+    
+  }
     render(){
         return(
           <div id="Humeur">
@@ -78,8 +83,16 @@ export default class Humeur extends React.Component{
         );
     }
     componentDidMount(){
-        console.log(show_stressLvl());
-    }
+      console.log(show_stressLvl());
+  }
+
 }
 
 
+function show_stressLvl2()
+{
+  
+
+
+  
+}
