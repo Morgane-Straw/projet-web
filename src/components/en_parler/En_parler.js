@@ -13,6 +13,7 @@ import autre from '../../asset/autre.png'
 import envoyer from '../../asset/envoyer.png'
 import user_stats from '../data/user_stats';
 import writeFile from 'file-system';
+import {Route, Link} from 'react-router-dom';
 
 
 export default class En_parler extends React.Component{
@@ -60,6 +61,7 @@ export default class En_parler extends React.Component{
                 <input  type="image" name="submit" src={envoyer} className="btn-en-parler"/>
                 </div>
             </form>
+            <div><Link to="/exempleexercice"><button className="Button-sos Button-sos2">Faire un exercice</button></Link></div>
             <Navbarre/>
             </div>
         );
