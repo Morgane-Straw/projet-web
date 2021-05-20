@@ -40,18 +40,19 @@ color: #858585;
 }
 .texte-en-parler{
 
-    width: 400px;
+    width: 350px;
     height: 180px;
     margin-left:auto;
     margin-right:auto;
     margin-top:30px;
+
 background: #FFFDFD;
 box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
 border-radius: 24px;
-margin-bottom:70px;
+margin-bottom:30px;
 text-align: justify;
 padding-top:15px;
-padding-left: 10px;
+padding-left: 15px;
 padding-right:70px;
 
 }
@@ -86,13 +87,15 @@ padding-right:70px;
 .btn-en-parler{
     width: 80px;
     position: relative;
-    top:-150px;
-    margin-left:310px;
+    top:-105px;
+    margin-left:270px;
     
 }
 .Button-sos{
+    position: relative;
+
     border-radius: 30px;
-    background-color :#5775FF;
+    background-color :#19D77C;
     border:none;
     color: white;        
     font-weight: bold;
@@ -100,5 +103,7 @@ padding-right:70px;
     width: 210px;
     height: 40px;
     box-shadow: 0px 5px 7px gray;
+    margin-bottom: 50px ;
+    top:-70px;
 
 }
