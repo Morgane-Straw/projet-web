@@ -18,13 +18,6 @@ export default class InformationsPerso extends React.Component{
         };
     }
 
-    onChangeName = (new_name) => {
-        this.setState({
-            nom : new_name,
-           
-        });
-    }
-
 
     render(){
         return(
