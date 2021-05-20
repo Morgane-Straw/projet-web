@@ -14,8 +14,9 @@ export default class Sos extends React.Component{
                <img src={stress_img} className="Sos_img"></img>
             <div className="Texte-sos"> Vous semblez angoissé...</div>
             <div><Link to="/en_parler"><button className="Button-sos">En parler</button></Link></div>
-            <div><button className="Button-sos Button-sos2">Faire un exercice</button></div>
-            <Navbarre/>
+            <div><Link to="/exempleexercice"><button className="Button-sos Button-sos2">Faire un exercice</button></Link></div>
+            <div><Link to="/exempleexercice"><button className="Button-sos Button-sos3">Appeler un professionnel</button></Link></div>
+           <Navbarre/>
             </div>
         );
     }

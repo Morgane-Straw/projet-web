@@ -9,14 +9,19 @@
     color: white;        
     font-weight: bold;
   
-    width: 200px;
+    width: 220px;
     height: 40px;
     box-shadow: 0px 5px 7px gray;
     margin-top: 50px;
 }
 .Button-sos2{
-    background: #4BCD77;
-    margin-top: 30px;
+    background: #31DA89;
+    margin-top: 25px;
+}
+.Button-sos3{
+    background: white;
+    margin-top: 25px;
+    color: #F76C31;   
 }
 .Texte-sos{
     position: static;
@@ -27,6 +32,6 @@
     line-height: 16px;
     font-size: 26px;
     text-align: center;
-    color: #5775FF;
+    color: #4FADEA;
 margin-top: 20px;
 }
