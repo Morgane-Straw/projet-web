@@ -1,7 +1,8 @@
 import React from "react";
-import Button from 'react-bootstrap/Button'
+import './Sos.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbarre from '../navbarre/Navbarre';
+import stress_img from '../../asset/stress_img.png';
 
 
 export default class Sos extends React.Component{
@@ -9,8 +10,10 @@ export default class Sos extends React.Component{
     render(){
         return(
             <div className="Page_Normale"> 
-               <h1>SOS</h1>
-               <Navbarre/>
+               <img src={stress_img} className="Sos_img"></img>
+            <div className="Texte-sos"> Vous semblez angoissé...</div>
+            <div><button className="Button-sos">En parler</button></div>
+            <div><button className="Button-sos Button-sos2">Faire un exercice</button></div>
             </div>
         );
     }
