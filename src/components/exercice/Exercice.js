@@ -6,6 +6,7 @@ import sunset_image from '../../asset/sunset.jpg';
 import arbre_image from '../../asset/arbre.jpg';
 import ocean_image from '../../asset/ocean.jpg';
 import prairie_image from '../../asset/prairie.jpg';
+import {Route, Link} from 'react-router-dom';
 
 
 import './Exercice.css';
@@ -21,9 +22,9 @@ export default class Exercice extends React.Component{
                </div>
 
                <div className="Images_Exercice">
-               <img src={arbre_image} className="Sunset_Image" alt="sunset_image" />
-               <img src={sunset_image} className="Sunset_Image" alt="sunset_image" />
-               <img src={sunset_image} className="Sunset_Image" alt="sunset_image" />
+                <Link to="/exempleexercice"><img src={arbre_image} className="Sunset_Image" alt="sunset_image" /></Link>
+                <Link to="/exempleexercice"><img src={sunset_image} className="Sunset_Image" alt="sunset_image" /></Link>
+                <Link to="/exempleexercice"><img src={sunset_image} className="Sunset_Image" alt="sunset_image" /></Link>
                </div>
          
                <div className="Type_Exercice">
@@ -32,9 +33,9 @@ export default class Exercice extends React.Component{
          
 
                <div className="Images_Exercice2">
-               <img src={prairie_image} className="Sunset_Image" alt="prairie_image" />
-               <img src={ocean_image} className="Sunset_Image" alt="ocean_image" />
-               <img src={sunset_image} className="Sunset_Image" alt="sunset_image" />
+               <Link to="/exempleexercice"><img src={prairie_image} className="Sunset_Image" alt="prairie_image" /></Link>
+               <Link to="/exempleexercice"><img src={ocean_image} className="Sunset_Image" alt="ocean_image" /></Link>
+               <Link to="/exempleexercice"><img src={sunset_image} className="Sunset_Image" alt="sunset_image" /></Link>
                </div>
                <Navbarre/>
             </div>
