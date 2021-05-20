@@ -1,0 +1,88 @@
+.Photo_Profil{
+    border-radius: 100px;
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-left: 20px;
+}
+
+.Infos_Perso{
+    margin-top: 10px;
+
+}
+
+.Text_Profil{
+    color:#5775FF;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.Box_Profil{
+    width: 260px;
+    height: 200px;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    box-shadow: 0px 5px 7px lightgray;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-top: 10px;
+
+}
+
+.Gerer_Profil{
+    margin-top: 50px;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.Text_InfosPerso{
+    color:white
+}
+
+.Text_Centre{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Infos_Compte{
+    background-color: #5775FF;
+    padding-left: 15px;
+}
+
+.Text_Param{
+    color: #5775FF;
+    padding-left: 15px;
+}
+
+.Text_Centre2{
+    border-bottom: 1px solid #5775FF;
+    border-top: 1px solid #5775FF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Text_InfosTitre{
+    font-weight: bold;
+}
+
+.Nom_Prenom{
+    color: #5775FF;
+    font-family: Rubik, sans-serif;
+    font-size: 24px;
+    padding-top: 20px;
+   
+}
+
+.Mail{
+    font-weight: lighter;
+    color: #5775FF;
+    line-height: 21px;
+    font-size: 18px;
+
+}
