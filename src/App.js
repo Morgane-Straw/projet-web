@@ -11,6 +11,7 @@ import Accueil from './components/accueil/Accueil';
 import Navbarre from './components/navbarre/Navbarre';
 import SOS from './components/sos/Sos';
 import Exemple_exercice from './components/exemple_exercice/Exemple_exercice';
+import En_parler from './components/en_parler/En_parler';
 import reportWebVitals from './reportWebVitals';
 import {Route, Link} from 'react-router-dom';
 
@@ -23,6 +24,7 @@ function App() {
       <Route exact path="/inscription" component= {Inscription}/>
       <Route exact path="/data" component= {Data}/>
       <Route exact path="/exercice" component= {Exercice}/>
+      <Route exact path="/en_parler" component= {En_parler}/>
       <Route exact path="/donnees" component= {Donnees}/>
       <Route exact path="/accueil" component= {Accueil}/>
       <Route exact path="/sos" component= {SOS}/>

@@ -1,0 +1,92 @@
+.titre{
+    position:relative;
+
+    margin-left:auto;
+    margin-right:auto;
+    width: 300px;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    line-height: 16px;
+    font-size: 26px;
+    text-align: center;
+    color: #5775FF;
+    top: 50px;
+}
+.icone-cause-stress{
+    width: 82px;
+}
+.texte-cause-stress{
+    font-family: Raleway;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+text-align: center;
+
+color: #858585;
+}
+.cause-stress{
+    display:inline-block;
+    margin:10px;
+}
+.causes{
+    position: relative;
+    width: 400px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:70px;
+}
+.texte-en-parler{
+
+    width: 400px;
+    height: 180px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:30px;
+background: #FFFDFD;
+box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+border-radius: 24px;
+margin-bottom:70px;
+text-align: justify;
+padding-top:15px;
+padding-left: 10px;
+padding-right:70px;
+
+}
+.sous-titre{
+    position:relative;
+
+    margin-left:auto;
+    margin-right:auto;
+    width: 300px;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    line-height: 16px;
+    font-size: 20px;
+    text-align: center;
+    color: #5775FF;
+
+}
+.Valider{
+    border-radius: 30px;
+    background-color :#5775FF;
+    border:none;
+    color: white;        
+    font-weight: bold;
+  
+    width: 200px;
+    height: 40px;
+    box-shadow: 0px 5px 7px gray;
+    margin-top: 100px;
+}
+.btn-en-parler{
+    width: 80px;
+    position: relative;
+    top:-150px;
+    margin-left:310px;
+    
+}
