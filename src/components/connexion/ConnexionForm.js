@@ -27,7 +27,7 @@ export default class ConnexionForm extends React.Component{
                             <Form.Check className="Text2" type="checkbox" label="Se souvenir de moi" />
                         </Form.Group>
                     </div>
-                    <Link to="/accueil"><button className="Valider" type="submit">
+                    <Link to="/accueil" ><button className="Valider" type="submit" >
                             Valider
                         </button></Link>
                     <br/><Link className="mdp_oublie">Mot de passe oublié ?</Link>

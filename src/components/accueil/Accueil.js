@@ -1,92 +1,86 @@
 import React from "react";
-import Button from 'react-bootstrap/Button'
+import Parse from 'parse';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbarre from '..//navbarre/Navbarre';
-import sun_logo from '../../sun.png';
 import './Accueil.css';
 import bibo from '../../Bibo.png';
 import Humeur from "../data/Humeur.js";
 import Sos from "../sos/Sos.js";
-import user_stress from '../data/user_stress';
-import user_stats from '../data/user_stats';
 import {now} from  "../data/Humeur.js";
 
 export default class Accueil extends React.Component{
     constructor(props) {
         super(props);
-    
-    
-        this.state = {
-            stress: get_Stress(),
-            relax:get_Relax()
-          }
+        // N’appelez pas `this.setState()` ici !
+        this.state = { stress: false };
       }
-
     render(){
         return(
-            <div>
-                {!this.state.stress?<div  id= 'Accueil' className="Page_Normale Page_centree"> 
+            <div>{!this.state.stress?<div  id= 'Accueil' className="Page_Normale Page_centree"> 
                     <img src={bibo} className="Bibo_accueil" alt="bibo" /> 
                     <p className="Text_Bonjour">Bonjour</p>
                     
                     <div className="Humeur">
-                        <Humeur/>
+                        <Humeur data={this.props.match.params.user}/>
                        
                     </div>
                 </div> :
                 <div  id="Sos" className="Sos"><Sos/></div>}
-                <Navbarre/>
+                            
+            <Navbarre/>
             </div>
         );
-
     }
-
-
-}
-
-  function get_Stress(){
-        const user=1
+    componentDidMount(){
+        Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
+        Parse.initialize(
+          'Uxrn1se1WkRL8vnnfKkMQvfuccXD7Ar7fKNTcyN2', // This is your Application ID
+          'nrYhcWChbWblkQcKB3aYMLjVhZbkP4tw1aVAVHeh' // This is your Javascript key
+        );
+        const user=1;
+        console.log(user);
         const id=now()+' '+user;
-        const hr = user_stress.map((user_stress)=>{
-            for (var i in user_stress.dataId ){
-            if(id==user_stress.dataId[i]){
-                return(user_stress.HR[i]);
-            }
-            }
-            
-        }).reduce((a, b) => a + b, 0);
-    const stress_threshold = user_stats.map((user_stats)=>{
+        const Utilisateur = Parse.Object.extend('Utilisateur');
+        const query = new Parse.Query(Utilisateur);
+        query.equalTo("dataID", id);
+        query.find().then((results) => {
+          const object = results[0];
+          const HR = object.get("HR")
+          const User_Stats = Parse.Object.extend('User_Stats');
+          const query2 = new Parse.Query(User_Stats);
+          query2.equalTo("userId", ''+user);
+          query2.find().then((results) => {
+            const object2 = results[0];
+      
+            const stress_threshold = object2.get("stress_threshold")
+      
+            const stress = HR>stress_threshold;
+      
+            if (typeof document !== 'undefined'){
 
-        for (var i in user_stats.userId ){
-            if(user==user_stats.userId[i]){
-                
-                            return(user_stats.stress_threshold[i]);
-            }
-        }
-        
-        }).reduce((a, b) => a + b, 0);   
-        return(hr>stress_threshold);
-  }
-  function get_Relax(){
-    const user=1
-    const id=now()+' '+user;
-    const hr = user_stress.map((user_stress)=>{
-        for (var i in user_stress.dataId ){
-        if(id==user_stress.dataId[i]){
-            return(user_stress.HR[i]);
-        }
-        }
-        
-    }).reduce((a, b) => a + b, 0);
-    const relaxation_threshold = user_stats.map((user_stats)=>{
-
-        for (var i in user_stats.userId ){
-            if(user==user_stats.userId[i]){
-                            return(user_stats.relaxation_threshold[i]);
-            }
-        }
-        
-    }).reduce((a, b) => a + b, 0);   
-
-    return(hr<relaxation_threshold);
+      
+              if (stress){
+                  this.setState({'stress':'true'});
+                }
+            console.log('stress threshold:', stress_threshold);
+            console.log('stress:', stress);
+      
+        }}, (error) => {
+            if (typeof document !== 'undefined') {
+            document.write(`Error while fetching User_Stats: ${JSON.stringify(error)}`);
+            console.error('Error while fetching User_Stats', error);
+          }
+        });
+          if (typeof document !== 'undefined'){
+          console.log('HR:', HR);
+          }
+        }, (error) => {
+          if (typeof document !== 'undefined') {
+          document.write(`Error while fetching Utilisateur: ${JSON.stringify(error)}`);
+          console.error('Error while fetching Utilisateur', error);
+          }
+        });
+      
+       
+    }
 }
