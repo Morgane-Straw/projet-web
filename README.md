@@ -1,5 +1,7 @@
 Projet réalisé par Valentine Dassenoy, Wanda Fey, Morgane Pailler et Aurore Sucheta
 
+Vous trouverez dans le dossier racine de ce projet un fichier "Rapport Bibo" détaillant des différents travaux réalisés pour le projet.
+
 L'application change d'interface en fonction de la fréquence cardiaque de l'utilisateur
 Pour voir l'état actuel de cette constante ainsi que les valeurs limites au dessus desquelles l'utilisateur est considéré comme stressé, normal ou détendu vous pouvez ouvrir la console sur la page d'accueil.
 
